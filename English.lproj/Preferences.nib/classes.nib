@@ -1,0 +1,49 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                addHost = id; 
+                addLocal = id; 
+                addRemote = id; 
+                controlChanged = id; 
+                delHost = id; 
+                delLocal = id; 
+                delRemote = id; 
+                disclosure = id; 
+            }; 
+            CLASS = PreferencesController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                SOCKS4Port = id; 
+                allowLAN = id; 
+                autoConnect = id; 
+                autoOpen = id; 
+                commandLine = id; 
+                compress = id; 
+                cryptMethod = id; 
+                drawer = id; 
+                emptyView = id; 
+                enableSOCKS4 = id; 
+                forcev1 = id; 
+                fullView = id; 
+                handleAuthentication = id; 
+                host = id; 
+                localList = id; 
+                login = id; 
+                name = id; 
+                options = id; 
+                port = id; 
+                remoteList = id; 
+                tunnelsList = id; 
+                urlTextField = id; 
+                window = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = TLinkTextField; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
+        {CLASS = TVersionTextField; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
+        {CLASS = TunnelsTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }
+    ); 
+    IBVersion = 1; 
+}

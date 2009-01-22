@@ -1,0 +1,224 @@
+// !$*UTF8*$!
+{
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeArchitecture = i386;
+		activeBuildConfigurationName = Development;
+		activeExecutable = 45F440640F233022004EB88E /* SSH Tunnel Manager */;
+		activeTarget = 8D1107260486CEB800E47090 /* SSH Tunnel Manager */;
+		codeSenseManager = 45F440770F233042004EB88E /* Code sense */;
+		executables = (
+			45F440640F233022004EB88E /* SSH Tunnel Manager */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					434,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 254295967;
+			PBXWorkspaceStateSaveDate = 254295967;
+		};
+		perUserProjectItems = {
+			452E3AD70F283FA20082D399 /* PBXTextBookmark */ = 452E3AD70F283FA20082D399 /* PBXTextBookmark */;
+			452E3ADC0F283FA90082D399 /* PBXTextBookmark */ = 452E3ADC0F283FA90082D399 /* PBXTextBookmark */;
+			452E3ADD0F283FAA0082D399 /* PBXTextBookmark */ = 452E3ADD0F283FAA0082D399 /* PBXTextBookmark */;
+			452E3ADE0F283FBE0082D399 /* PBXTextBookmark */ = 452E3ADE0F283FBE0082D399 /* PBXTextBookmark */;
+			45382CBD0F233181001EE9ED = 45382CBD0F233181001EE9ED /* PBXTextBookmark */;
+			45382CBE0F233181001EE9ED = 45382CBE0F233181001EE9ED /* PBXTextBookmark */;
+			45382CBF0F233181001EE9ED = 45382CBF0F233181001EE9ED /* PBXTextBookmark */;
+			45382CC00F233181001EE9ED = 45382CC00F233181001EE9ED /* PBXTextBookmark */;
+			45F4407B0F2330A6004EB88E = 45F4407B0F2330A6004EB88E /* PBXTextBookmark */;
+			45F4407D0F2330A6004EB88E = 45F4407D0F2330A6004EB88E /* PBXTextBookmark */;
+		};
+		sourceControlManager = 45F440760F233042004EB88E /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	452E3AD70F283FA20082D399 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA7149D9056B99EF009CEC64 /* SSHTunnel.m */;
+		name = "SSHTunnel.m: 304";
+		rLen = 7;
+		rLoc = 9377;
+		rType = 0;
+		vrLen = 1750;
+		vrLoc = 8035;
+	};
+	452E3ADC0F283FA90082D399 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA7149D9056B99EF009CEC64 /* SSHTunnel.m */;
+		name = "SSHTunnel.m: 304";
+		rLen = 7;
+		rLoc = 9377;
+		rType = 0;
+		vrLen = 1237;
+		vrLoc = 8035;
+	};
+	452E3ADD0F283FAA0082D399 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA7149D9056B99EF009CEC64 /* SSHTunnel.m */;
+		name = "SSHTunnel.m: 304";
+		rLen = 7;
+		rLoc = 9377;
+		rType = 0;
+		vrLen = 1237;
+		vrLoc = 8035;
+	};
+	452E3ADE0F283FBE0082D399 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA7149D9056B99EF009CEC64 /* SSHTunnel.m */;
+		name = "SSHTunnel.m: 304";
+		rLen = 7;
+		rLoc = 9377;
+		rType = 0;
+		vrLen = 1237;
+		vrLoc = 8035;
+	};
+	45382CBD0F233181001EE9ED /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA90AB0C056A288E009C982A /* PreferencesController.h */;
+		name = "PreferencesController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 741;
+		vrLoc = 0;
+	};
+	45382CBE0F233181001EE9ED /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA7149D9056B99EF009CEC64 /* SSHTunnel.m */;
+		name = "SSHTunnel.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 809;
+		vrLoc = 0;
+	};
+	45382CBF0F233181001EE9ED /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA90AB0C056A288E009C982A /* PreferencesController.h */;
+		name = "PreferencesController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 741;
+		vrLoc = 0;
+	};
+	45382CC00F233181001EE9ED /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA7149D9056B99EF009CEC64 /* SSHTunnel.m */;
+		name = "SSHTunnel.m: 304";
+		rLen = 7;
+		rLoc = 9377;
+		rType = 0;
+		vrLen = 1766;
+		vrLoc = 8019;
+	};
+	45F440640F233022004EB88E /* SSH Tunnel Manager */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "SSH Tunnel Manager";
+		sourceDirectories = (
+		);
+	};
+	45F440760F233042004EB88E /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	45F440770F233042004EB88E /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	45F4407B0F2330A6004EB88E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA64C5960574A84900C7F06D /* SSHTunnelApp.h */;
+		name = "SSHTunnelApp.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 212;
+		vrLoc = 0;
+	};
+	45F4407D0F2330A6004EB88E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA64C5960574A84900C7F06D /* SSHTunnelApp.h */;
+		name = "SSHTunnelApp.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 212;
+		vrLoc = 0;
+	};
+	8D1107260486CEB800E47090 /* SSH Tunnel Manager */ = {
+		activeExec = 0;
+		executables = (
+			45F440640F233022004EB88E /* SSH Tunnel Manager */,
+		);
+	};
+	AA64C5960574A84900C7F06D /* SSHTunnelApp.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {542, 411}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 212}";
+		};
+	};
+	AA7149D9056B99EF009CEC64 /* SSHTunnel.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {806, 6958}}";
+			sepNavSelRange = "{9377, 7}";
+			sepNavVisRange = "{8035, 1237}";
+		};
+	};
+	AA90AB0C056A288E009C982A /* PreferencesController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {542, 742}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 741}";
+		};
+	};
+	AA90AB0D056A288E009C982A /* PreferencesController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {818, 5292}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{10720, 884}";
+			sepNavWindowFrame = "{{173, 103}, {877, 666}}";
+		};
+	};
+}

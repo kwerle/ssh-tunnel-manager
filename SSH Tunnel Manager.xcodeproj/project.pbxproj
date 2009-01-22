@@ -1,0 +1,573 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D1107280486CEB800E47090 /* SSH Tunnel Manager 2_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32CA4F630368D1EE00C91783 /* SSH Tunnel Manager 2_Prefix.pch */; };
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		AA5BA7DD05BEEC3600E3E315 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = AA5BA7DC05BEEC3600E3E315 /* Credits.rtf */; };
+		AA64C5980574A84900C7F06D /* SSHTunnelApp.h in Headers */ = {isa = PBXBuildFile; fileRef = AA64C5960574A84900C7F06D /* SSHTunnelApp.h */; };
+		AA64C5990574A84900C7F06D /* SSHTunnelApp.m in Sources */ = {isa = PBXBuildFile; fileRef = AA64C5970574A84900C7F06D /* SSHTunnelApp.m */; };
+		AA64C5D60575026B00C7F06D /* start_n.tif in Resources */ = {isa = PBXBuildFile; fileRef = AA64C5D20575026A00C7F06D /* start_n.tif */; };
+		AA64C5D70575026C00C7F06D /* start_p.tif in Resources */ = {isa = PBXBuildFile; fileRef = AA64C5D30575026B00C7F06D /* start_p.tif */; };
+		AA64C5D80575026C00C7F06D /* stop_n.tif in Resources */ = {isa = PBXBuildFile; fileRef = AA64C5D40575026B00C7F06D /* stop_n.tif */; };
+		AA64C5D90575026C00C7F06D /* stop_p.tif in Resources */ = {isa = PBXBuildFile; fileRef = AA64C5D50575026B00C7F06D /* stop_p.tif */; };
+		AA6D68CA05C808D2007F1476 /* ssh in Resources */ = {isa = PBXBuildFile; fileRef = AA6D68C905C808D2007F1476 /* ssh */; };
+		AA7149AD056B7E5C009CEC64 /* Add_Pressed.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AA7149AC056B7E5C009CEC64 /* Add_Pressed.tiff */; };
+		AA7149B3056B8141009CEC64 /* Add.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AA7149B2056B8141009CEC64 /* Add.tiff */; };
+		AA7149B5056B8199009CEC64 /* Add.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AA7149B4056B8199009CEC64 /* Add.tiff */; };
+		AA7149B7056B8225009CEC64 /* Add_Pressed.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AA7149B6056B8225009CEC64 /* Add_Pressed.tiff */; };
+		AA7149BB056B8411009CEC64 /* Remove_Disabled.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AA7149B8056B8411009CEC64 /* Remove_Disabled.tiff */; };
+		AA7149BC056B8411009CEC64 /* Remove_Pressed.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AA7149B9056B8411009CEC64 /* Remove_Pressed.tiff */; };
+		AA7149BD056B8411009CEC64 /* Remove.tif in Resources */ = {isa = PBXBuildFile; fileRef = AA7149BA056B8411009CEC64 /* Remove.tif */; };
+		AA7149DA056B99EF009CEC64 /* SSHTunnel.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7149D8056B99EF009CEC64 /* SSHTunnel.h */; };
+		AA7149DB056B99F0009CEC64 /* SSHTunnel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7149D9056B99EF009CEC64 /* SSHTunnel.m */; };
+		AA8ACF5705B85334005BFBFE /* passWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA8ACF5505B85334005BFBFE /* passWindowController.h */; };
+		AA8ACF5805B85334005BFBFE /* passWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8ACF5605B85334005BFBFE /* passWindowController.m */; };
+		AA8ACF5B05B8537E005BFBFE /* ynWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA8ACF5905B8537E005BFBFE /* ynWindowController.h */; };
+		AA8ACF5C05B8537E005BFBFE /* ynWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8ACF5A05B8537E005BFBFE /* ynWindowController.m */; };
+		AA90AAFA056A0CEC009C982A /* offState.png in Resources */ = {isa = PBXBuildFile; fileRef = AA90AAF8056A0CEC009C982A /* offState.png */; };
+		AA90AAFB056A0CEC009C982A /* onState.png in Resources */ = {isa = PBXBuildFile; fileRef = AA90AAF9056A0CEC009C982A /* onState.png */; };
+		AA90AB05056A13F2009C982A /* stm.icns in Resources */ = {isa = PBXBuildFile; fileRef = AA90AB04056A13F2009C982A /* stm.icns */; };
+		AA90AB07056A1519009C982A /* stm.tif in Resources */ = {isa = PBXBuildFile; fileRef = AA90AB06056A1519009C982A /* stm.tif */; };
+		AA90AB0E056A288E009C982A /* PreferencesController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA90AB0C056A288E009C982A /* PreferencesController.h */; };
+		AA90AB0F056A288E009C982A /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA90AB0D056A288E009C982A /* PreferencesController.m */; };
+		AA99E4070568FFD2007ACC90 /* SSHTunnelManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AA99E4050568FFD2007ACC90 /* SSHTunnelManager.h */; };
+		AA99E4080568FFD2007ACC90 /* SSHTunnelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA99E4060568FFD2007ACC90 /* SSHTunnelManager.m */; };
+		AAA9BB4505765A12003D1ABB /* TynsoeClasses.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA9BB4305765A12003D1ABB /* TynsoeClasses.h */; };
+		AAA9BB4605765A12003D1ABB /* TynsoeClasses.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA9BB4405765A12003D1ABB /* TynsoeClasses.m */; };
+		AAAF91CB05B7E2AC0004C55E /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = AAAF91CA05B7E2AC0004C55E /* Preferences.nib */; };
+		AAC841DF0569946200C5A7D2 /* TunnelsTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC841DD0569946200C5A7D2 /* TunnelsTableView.h */; };
+		AAC841E00569946200C5A7D2 /* TunnelsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC841DE0569946200C5A7D2 /* TunnelsTableView.m */; };
+		AAE7B74B05BD8E6E00B71663 /* passQuery.nib in Resources */ = {isa = PBXBuildFile; fileRef = AAE7B74A05BD8E6E00B71663 /* passQuery.nib */; };
+		AAE7B74D05BD8E7300B71663 /* ynQuery.nib in Resources */ = {isa = PBXBuildFile; fileRef = AAE7B74C05BD8E7300B71663 /* ynQuery.nib */; };
+		AAF712830572B69300E460D2 /* SSHTunnelManager.scriptSuite in Resources */ = {isa = PBXBuildFile; fileRef = AAF712820572B69300E460D2 /* SSHTunnelManager.scriptSuite */; };
+		AAF712850572B6A100E460D2 /* SSHTunnelManager.scriptTerminology in Resources */ = {isa = PBXBuildFile; fileRef = AAF712840572B6A100E460D2 /* SSHTunnelManager.scriptTerminology */; };
+		AAF712F30572C95200E460D2 /* askForPass.sh in Resources */ = {isa = PBXBuildFile; fileRef = AAF712F20572C95200E460D2 /* askForPass.sh */; };
+		AAFCFCC00573C406005EF049 /* middleState.png in Resources */ = {isa = PBXBuildFile; fileRef = AAFCFCBF0573C406005EF049 /* middleState.png */; };
+		AAFCFCF80573C95E005EF049 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAFCFCF70573C95E005EF049 /* Localizable.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* SSH Tunnel Manager 2_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SSH Tunnel Manager 2_Prefix.pch"; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* SSH Tunnel Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SSH Tunnel Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0328D705C07CA300567E2B /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/passQuery.nib; sourceTree = "<group>"; };
+		AA0328D805C07CBF00567E2B /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/ynQuery.nib; sourceTree = "<group>"; };
+		AA185044056AAE68007E2D28 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		AA5BA7D205BEEC2400E3E315 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
+		AA5BA7DE05BEEC3F00E3E315 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = French; path = French.lproj/Credits.rtf; sourceTree = "<group>"; };
+		AA64C5960574A84900C7F06D /* SSHTunnelApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SSHTunnelApp.h; sourceTree = "<group>"; };
+		AA64C5970574A84900C7F06D /* SSHTunnelApp.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SSHTunnelApp.m; sourceTree = "<group>"; };
+		AA64C5C70574CBB900C7F06D /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		AA64C5D20575026A00C7F06D /* start_n.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = start_n.tif; sourceTree = "<group>"; };
+		AA64C5D30575026B00C7F06D /* start_p.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = start_p.tif; sourceTree = "<group>"; };
+		AA64C5D40575026B00C7F06D /* stop_n.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = stop_n.tif; sourceTree = "<group>"; };
+		AA64C5D50575026B00C7F06D /* stop_p.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = stop_p.tif; sourceTree = "<group>"; };
+		AA6D68C905C808D2007F1476 /* ssh */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ssh; sourceTree = "<group>"; };
+		AA7149A4056B7D71009CEC64 /* Add_Disabled.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Add_Disabled.tiff; sourceTree = "<group>"; };
+		AA7149AC056B7E5C009CEC64 /* Add_Pressed.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Add_Pressed.tiff; sourceTree = "<group>"; };
+		AA7149B2056B8141009CEC64 /* Add.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Add.tiff; sourceTree = "<group>"; };
+		AA7149B4056B8199009CEC64 /* Add.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Add.tiff; sourceTree = "<group>"; };
+		AA7149B6056B8225009CEC64 /* Add_Pressed.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Add_Pressed.tiff; sourceTree = "<group>"; };
+		AA7149B8056B8411009CEC64 /* Remove_Disabled.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Remove_Disabled.tiff; sourceTree = "<group>"; };
+		AA7149B9056B8411009CEC64 /* Remove_Pressed.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Remove_Pressed.tiff; sourceTree = "<group>"; };
+		AA7149BA056B8411009CEC64 /* Remove.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Remove.tif; sourceTree = "<group>"; };
+		AA7149D8056B99EF009CEC64 /* SSHTunnel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSHTunnel.h; sourceTree = "<group>"; };
+		AA7149D9056B99EF009CEC64 /* SSHTunnel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSHTunnel.m; sourceTree = "<group>"; };
+		AA8ACF5105B85274005BFBFE /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/passQuery.nib; sourceTree = "<group>"; };
+		AA8ACF5305B8529D005BFBFE /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/ynQuery.nib; sourceTree = "<group>"; };
+		AA8ACF5505B85334005BFBFE /* passWindowController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = passWindowController.h; sourceTree = "<group>"; };
+		AA8ACF5605B85334005BFBFE /* passWindowController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = passWindowController.m; sourceTree = "<group>"; };
+		AA8ACF5905B8537E005BFBFE /* ynWindowController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ynWindowController.h; sourceTree = "<group>"; };
+		AA8ACF5A05B8537E005BFBFE /* ynWindowController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ynWindowController.m; sourceTree = "<group>"; };
+		AA90AAF8056A0CEC009C982A /* offState.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = offState.png; sourceTree = "<group>"; };
+		AA90AAF9056A0CEC009C982A /* onState.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onState.png; sourceTree = "<group>"; };
+		AA90AB04056A13F2009C982A /* stm.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = stm.icns; sourceTree = "<group>"; };
+		AA90AB06056A1519009C982A /* stm.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = stm.tif; sourceTree = "<group>"; };
+		AA90AB08056A1545009C982A /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Preferences.nib; sourceTree = "<group>"; };
+		AA90AB0C056A288E009C982A /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
+		AA90AB0D056A288E009C982A /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
+		AA99E4050568FFD2007ACC90 /* SSHTunnelManager.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SSHTunnelManager.h; sourceTree = "<group>"; };
+		AA99E4060568FFD2007ACC90 /* SSHTunnelManager.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SSHTunnelManager.m; sourceTree = "<group>"; };
+		AAA9BB4305765A12003D1ABB /* TynsoeClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TynsoeClasses.h; sourceTree = "<group>"; };
+		AAA9BB4405765A12003D1ABB /* TynsoeClasses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TynsoeClasses.m; sourceTree = "<group>"; };
+		AAAF91CC05B7E2B30004C55E /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/Preferences.nib; sourceTree = "<group>"; };
+		AAC841DD0569946200C5A7D2 /* TunnelsTableView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TunnelsTableView.h; sourceTree = "<group>"; };
+		AAC841DE0569946200C5A7D2 /* TunnelsTableView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TunnelsTableView.m; sourceTree = "<group>"; };
+		AAF712820572B69300E460D2 /* SSHTunnelManager.scriptSuite */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.scriptSuite; path = SSHTunnelManager.scriptSuite; sourceTree = "<group>"; };
+		AAF712840572B6A100E460D2 /* SSHTunnelManager.scriptTerminology */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.scriptTerminology; path = SSHTunnelManager.scriptTerminology; sourceTree = "<group>"; };
+		AAF712F20572C95200E460D2 /* askForPass.sh */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.script.sh; path = askForPass.sh; sourceTree = "<group>"; };
+		AAFCFCBF0573C406005EF049 /* middleState.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = middleState.png; sourceTree = "<group>"; };
+		AAFCFCC30573C6A9005EF049 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AAFCFCF90573C963005EF049 /* French */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/Localizable.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AA99E4050568FFD2007ACC90 /* SSHTunnelManager.h */,
+				AA99E4060568FFD2007ACC90 /* SSHTunnelManager.m */,
+				AAC841DD0569946200C5A7D2 /* TunnelsTableView.h */,
+				AAC841DE0569946200C5A7D2 /* TunnelsTableView.m */,
+				AA90AB0C056A288E009C982A /* PreferencesController.h */,
+				AA90AB0D056A288E009C982A /* PreferencesController.m */,
+				AA7149D8056B99EF009CEC64 /* SSHTunnel.h */,
+				AA7149D9056B99EF009CEC64 /* SSHTunnel.m */,
+				AA64C5960574A84900C7F06D /* SSHTunnelApp.h */,
+				AA64C5970574A84900C7F06D /* SSHTunnelApp.m */,
+				AAA9BB4305765A12003D1ABB /* TynsoeClasses.h */,
+				AAA9BB4405765A12003D1ABB /* TynsoeClasses.m */,
+				AA8ACF5505B85334005BFBFE /* passWindowController.h */,
+				AA8ACF5605B85334005BFBFE /* passWindowController.m */,
+				AA8ACF5905B8537E005BFBFE /* ynWindowController.h */,
+				AA8ACF5A05B8537E005BFBFE /* ynWindowController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* SSH Tunnel Manager.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* SSH Tunnel Manager */ = {
+			isa = PBXGroup;
+			children = (
+				AA18503E056AAE05007E2D28 /* tunnelOpener */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = "SSH Tunnel Manager";
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* SSH Tunnel Manager 2_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AA6D68C905C808D2007F1476 /* ssh */,
+				AA5BA7DC05BEEC3600E3E315 /* Credits.rtf */,
+				AAF712F20572C95200E460D2 /* askForPass.sh */,
+				AA90AB06056A1519009C982A /* stm.tif */,
+				AA90AB04056A13F2009C982A /* stm.icns */,
+				AA90AAF8056A0CEC009C982A /* offState.png */,
+				AAFCFCBF0573C406005EF049 /* middleState.png */,
+				AA90AAF9056A0CEC009C982A /* onState.png */,
+				AA7149B4056B8199009CEC64 /* Add.tiff */,
+				AA7149B6056B8225009CEC64 /* Add_Pressed.tiff */,
+				AA7149A4056B7D71009CEC64 /* Add_Disabled.tiff */,
+				AA7149B8056B8411009CEC64 /* Remove_Disabled.tiff */,
+				AA7149B9056B8411009CEC64 /* Remove_Pressed.tiff */,
+				AA64C5D20575026A00C7F06D /* start_n.tif */,
+				AA64C5D30575026B00C7F06D /* start_p.tif */,
+				AA64C5D40575026B00C7F06D /* stop_n.tif */,
+				AA64C5D50575026B00C7F06D /* stop_p.tif */,
+				AA7149BA056B8411009CEC64 /* Remove.tif */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				AAAF91CA05B7E2AC0004C55E /* Preferences.nib */,
+				AAE7B74A05BD8E6E00B71663 /* passQuery.nib */,
+				AAE7B74C05BD8E7300B71663 /* ynQuery.nib */,
+				AA7149AC056B7E5C009CEC64 /* Add_Pressed.tiff */,
+				AA7149B2056B8141009CEC64 /* Add.tiff */,
+				AAF712820572B69300E460D2 /* SSHTunnelManager.scriptSuite */,
+				AAF712840572B6A100E460D2 /* SSHTunnelManager.scriptTerminology */,
+				AAFCFCF70573C95E005EF049 /* Localizable.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA18503E056AAE05007E2D28 /* tunnelOpener */ = {
+			isa = PBXGroup;
+			children = (
+				AA185044056AAE68007E2D28 /* main.c */,
+			);
+			name = tunnelOpener;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8D1107270486CEB800E47090 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1107280486CEB800E47090 /* SSH Tunnel Manager 2_Prefix.pch in Headers */,
+				AA99E4070568FFD2007ACC90 /* SSHTunnelManager.h in Headers */,
+				AAC841DF0569946200C5A7D2 /* TunnelsTableView.h in Headers */,
+				AA90AB0E056A288E009C982A /* PreferencesController.h in Headers */,
+				AA7149DA056B99EF009CEC64 /* SSHTunnel.h in Headers */,
+				AA64C5980574A84900C7F06D /* SSHTunnelApp.h in Headers */,
+				AAA9BB4505765A12003D1ABB /* TynsoeClasses.h in Headers */,
+				AA8ACF5705B85334005BFBFE /* passWindowController.h in Headers */,
+				AA8ACF5B05B8537E005BFBFE /* ynWindowController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* SSH Tunnel Manager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45F440750F233042004EB88E /* Build configuration list for PBXNativeTarget "SSH Tunnel Manager" */;
+			buildPhases = (
+				8D1107270486CEB800E47090 /* Headers */,
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SSH Tunnel Manager";
+			productInstallPath = "$(HOME)/Applications";
+			productName = "SSH Tunnel Manager 2";
+			productReference = 8D1107320486CEB800E47090 /* SSH Tunnel Manager.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 45F440740F233042004EB88E /* Build configuration list for PBXProject "SSH Tunnel Manager" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* SSH Tunnel Manager */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* SSH Tunnel Manager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				AA90AAFA056A0CEC009C982A /* offState.png in Resources */,
+				AA90AAFB056A0CEC009C982A /* onState.png in Resources */,
+				AA90AB05056A13F2009C982A /* stm.icns in Resources */,
+				AA90AB07056A1519009C982A /* stm.tif in Resources */,
+				AAAF91CB05B7E2AC0004C55E /* Preferences.nib in Resources */,
+				AA7149AD056B7E5C009CEC64 /* Add_Pressed.tiff in Resources */,
+				AA7149B3056B8141009CEC64 /* Add.tiff in Resources */,
+				AA7149B5056B8199009CEC64 /* Add.tiff in Resources */,
+				AA7149B7056B8225009CEC64 /* Add_Pressed.tiff in Resources */,
+				AA7149BB056B8411009CEC64 /* Remove_Disabled.tiff in Resources */,
+				AA7149BC056B8411009CEC64 /* Remove_Pressed.tiff in Resources */,
+				AA7149BD056B8411009CEC64 /* Remove.tif in Resources */,
+				AAF712830572B69300E460D2 /* SSHTunnelManager.scriptSuite in Resources */,
+				AAF712850572B6A100E460D2 /* SSHTunnelManager.scriptTerminology in Resources */,
+				AAF712F30572C95200E460D2 /* askForPass.sh in Resources */,
+				AAFCFCC00573C406005EF049 /* middleState.png in Resources */,
+				AAFCFCF80573C95E005EF049 /* Localizable.strings in Resources */,
+				AA64C5D60575026B00C7F06D /* start_n.tif in Resources */,
+				AA64C5D70575026C00C7F06D /* start_p.tif in Resources */,
+				AA64C5D80575026C00C7F06D /* stop_n.tif in Resources */,
+				AA64C5D90575026C00C7F06D /* stop_p.tif in Resources */,
+				AAE7B74B05BD8E6E00B71663 /* passQuery.nib in Resources */,
+				AAE7B74D05BD8E7300B71663 /* ynQuery.nib in Resources */,
+				AA5BA7DD05BEEC3600E3E315 /* Credits.rtf in Resources */,
+				AA6D68CA05C808D2007F1476 /* ssh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				AA99E4080568FFD2007ACC90 /* SSHTunnelManager.m in Sources */,
+				AAC841E00569946200C5A7D2 /* TunnelsTableView.m in Sources */,
+				AA90AB0F056A288E009C982A /* PreferencesController.m in Sources */,
+				AA7149DB056B99F0009CEC64 /* SSHTunnel.m in Sources */,
+				AA64C5990574A84900C7F06D /* SSHTunnelApp.m in Sources */,
+				AAA9BB4605765A12003D1ABB /* TynsoeClasses.m in Sources */,
+				AA8ACF5805B85334005BFBFE /* passWindowController.m in Sources */,
+				AA8ACF5C05B8537E005BFBFE /* ynWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+				AA64C5C70574CBB900C7F06D /* French */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		AA5BA7DC05BEEC3600E3E315 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA5BA7D205BEEC2400E3E315 /* English */,
+				AA5BA7DE05BEEC3F00E3E315 /* French */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		AAAF91CA05B7E2AC0004C55E /* Preferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA90AB08056A1545009C982A /* English */,
+				AAAF91CC05B7E2B30004C55E /* French */,
+			);
+			name = Preferences.nib;
+			sourceTree = "<group>";
+		};
+		AAE7B74A05BD8E6E00B71663 /* passQuery.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA8ACF5105B85274005BFBFE /* English */,
+				AA0328D705C07CA300567E2B /* French */,
+			);
+			name = passQuery.nib;
+			sourceTree = "<group>";
+		};
+		AAE7B74C05BD8E7300B71663 /* ynQuery.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA8ACF5305B8529D005BFBFE /* English */,
+				AA0328D805C07CBF00567E2B /* French */,
+			);
+			name = ynQuery.nib;
+			sourceTree = "<group>";
+		};
+		AAFCFCF70573C95E005EF049 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAFCFCC30573C6A9005EF049 /* English */,
+				AAFCFCF90573C963005EF049 /* French */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		45F4406E0F233024004EB88E /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		45F4406F0F233024004EB88E /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		45F440700F233024004EB88E /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+		45F440710F233024004EB88E /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SSH Tunnel Manager 2_Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "SSH Tunnel Manager";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		45F440720F233024004EB88E /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 40;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SSH Tunnel Manager 2_Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "SSH Tunnel Manager";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		45F440730F233024004EB88E /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SSH Tunnel Manager 2_Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "SSH Tunnel Manager";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		45F440740F233042004EB88E /* Build configuration list for PBXProject "SSH Tunnel Manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45F4406E0F233024004EB88E /* Development */,
+				45F4406F0F233024004EB88E /* Deployment */,
+				45F440700F233024004EB88E /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		45F440750F233042004EB88E /* Build configuration list for PBXNativeTarget "SSH Tunnel Manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45F440710F233024004EB88E /* Development */,
+				45F440720F233024004EB88E /* Deployment */,
+				45F440730F233024004EB88E /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

@@ -1,0 +1,12 @@
+"T_START" = "DEMARRAGE: %@";
+"T_STOP" = "ARRET: %@";
+"S_IDLE" = "Inactif";
+"S_CONNECTING" = "Connexion...";
+"S_CONNECTED" = "Connecté";
+"S_AUTH" =  "Authentifié";
+"S_PORT" = "Port %@ redirigé";
+"B_START" = "Démarrer";
+"B_STOP" = "Arrêter";
+
+"SHMENU_SHOW" = "Afficher les tunnels";
+"SHMENU_HIDE" = "Masquer les tunnels";

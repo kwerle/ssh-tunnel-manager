@@ -1,0 +1,12 @@
+"T_START" = "START: %@";
+"T_STOP" = "STOP: %@";
+"S_IDLE" = "Idle";
+"S_CONNECTING" = "Connecting...";
+"S_CONNECTED" = "Connected";
+"S_AUTH" =  "Authenticated";
+"S_PORT" = "Port %@ forwarded";
+"B_START" = "Start";
+"B_STOP" = "Stop";
+
+"SHMENU_SHOW" = "Show tunnels";
+"SHMENU_HIDE" = "Hide tunnels";

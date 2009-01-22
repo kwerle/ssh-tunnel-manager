@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {pwcCancel = id; pwcOk = id; }; 
+            CLASS = passWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {caption = id; password = id; }; 
+            SUPERCLASS = NSWindow; 
+        }
+    ); 
+    IBVersion = 1; 
+}
