@@ -40,6 +40,8 @@
 			452E3ADC0F283FA90082D399 /* PBXTextBookmark */ = 452E3ADC0F283FA90082D399 /* PBXTextBookmark */;
 			452E3ADD0F283FAA0082D399 /* PBXTextBookmark */ = 452E3ADD0F283FAA0082D399 /* PBXTextBookmark */;
 			452E3ADE0F283FBE0082D399 /* PBXTextBookmark */ = 452E3ADE0F283FBE0082D399 /* PBXTextBookmark */;
+			452E3ADF0F2849230082D399 /* PBXTextBookmark */ = 452E3ADF0F2849230082D399 /* PBXTextBookmark */;
+			452E3AE10F2849350082D399 /* PBXTextBookmark */ = 452E3AE10F2849350082D399 /* PBXTextBookmark */;
 			45382CBD0F233181001EE9ED = 45382CBD0F233181001EE9ED /* PBXTextBookmark */;
 			45382CBE0F233181001EE9ED = 45382CBE0F233181001EE9ED /* PBXTextBookmark */;
 			45382CBF0F233181001EE9ED = 45382CBF0F233181001EE9ED /* PBXTextBookmark */;
@@ -90,6 +92,26 @@
 		rType = 0;
 		vrLen = 1237;
 		vrLoc = 8035;
+	};
+	452E3ADF0F2849230082D399 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA7149D9056B99EF009CEC64 /* SSHTunnel.m */;
+		name = "SSHTunnel.m: 304";
+		rLen = 7;
+		rLoc = 9377;
+		rType = 0;
+		vrLen = 502;
+		vrLoc = 8770;
+	};
+	452E3AE10F2849350082D399 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA7149D9056B99EF009CEC64 /* SSHTunnel.m */;
+		name = "SSHTunnel.m: 304";
+		rLen = 7;
+		rLoc = 9377;
+		rType = 0;
+		vrLen = 1170;
+		vrLoc = 8446;
 	};
 	45382CBD0F233181001EE9ED /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -192,6 +214,14 @@
 			45F440640F233022004EB88E /* SSH Tunnel Manager */,
 		);
 	};
+	AA5BA7D205BEEC2400E3E315 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {838, 553}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {838, 553}}";
+			sepNavWindowFrame = "{{15, 207}, {877, 666}}";
+		};
+	};
 	AA64C5960574A84900C7F06D /* SSHTunnelApp.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {542, 411}}";
@@ -201,9 +231,9 @@
 	};
 	AA7149D9056B99EF009CEC64 /* SSHTunnel.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {806, 6958}}";
+			sepNavIntBoundsRect = "{{0, 0}, {806, 7070}}";
 			sepNavSelRange = "{9377, 7}";
-			sepNavVisRange = "{8035, 1237}";
+			sepNavVisRange = "{8446, 1170}";
 		};
 	};
 	AA90AB0C056A288E009C982A /* PreferencesController.h */ = {
