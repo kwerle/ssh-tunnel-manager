@@ -152,8 +152,6 @@
     [ tunnelsTable reloadData ];
     [[ tunnelsTable window ] display ];
 }
-#pragma mark -
-#pragma mark Preferences
 
 -(IBAction)openPreferences:(id)sender
 {
@@ -174,78 +172,7 @@
     [ tunnelsTable reloadData ];
     [[ tunnelsTable window ] display ];
 }
-/*
-#pragma mark -
-#pragma mark AppleScript
-- (id)authenticate:(NSScriptCommand *)command {
-    NSDictionary *args = [command evaluatedArguments];
-    NSString *givenQuery = [ args objectForKey:@"query"];
-    NSString *tunnelName = [ args objectForKey:@"tunnelName"];
-    NSString *fifo = [ args objectForKey:@"fifo"];
-    NSString *result = @"";
-    SSHTunnel *tunnel;
-    NSEnumerator *e;
-    NSWindowController *wc;
-    int RC;
-    
-    e = [ tunnels objectEnumerator ];
-    while (tunnel = [ e nextObject ])
-    {
-	if ([[ tunnel valueForKey: @"connName" ] isEqual: tunnelName ])
-	    break;
-    }
-    if ([ givenQuery  rangeOfString: @" (yes/no)? " ].location != NSNotFound )
-    {
-	
-	wc = [[ NSWindowController alloc ] initWithWindowNibName: @"ynQuery" ];
-	[ wc window ];
-	//[ wc setCaption: givenQuery ];
-	RC=[ NSApp runModalForWindow: ynAlertPanel ];
-	[ ynAlertPanel orderOut: self ];
-	
-	if (RC==1)
-	    result = @"no";
-	else if (RC==2)
-	    result = @"yes";
-	 
-	wc = [[ NSWindowController alloc ] initWithWindowNibName: @"ynQuery" ];
-	[[ wc window ] center ];
-	[[ wc window ] setValue: fifo forKey: @"fifo" ];
-	[[ wc window ] setValue: tunnel forKey: @"tunnel" ];
-	[[ wc window ] setTitle: [ tunnel valueForKey: @"connName" ]];
-	[(passWindowController*)[ wc window ] setACaption: givenQuery ];
-	[[ wc window ] makeKeyAndOrderFront: self ];
-	return @"OK";
-	
-    }
-    else
-    {
-	wc = [[ NSWindowController alloc ] initWithWindowNibName: @"passQuery" ];
-	[[ wc window ] center ];
-	[[ wc window ] setValue: fifo forKey: @"fifo" ];
-	[[ wc window ] setValue: tunnel forKey: @"tunnel" ];
-	[[ wc window ] setTitle: [ tunnel valueForKey: @"connName" ]];
-	[(passWindowController*)[ wc window ] setACaption: givenQuery ];
-	[[ wc window ] makeKeyAndOrderFront: self ];
-	return @"OK";
-	
-	[ alertText setStringValue: givenQuery ];
-	RC=[ NSApp runModalForWindow: alertPanel ];
-	[ alertPanel orderOut: self ];
-	if (RC==2)
-	    result = [ passwordField stringValue ];
-	else
-	{
-	    [ tunnel stopTunnel ] ;
-	    return nil;
-	}
-	[ passwordField setStringValue: @""];
-	 
-    }
-    
-    return result;
-}
-*/
+
 - (IBAction)ok:(id)sender;
 {
     [ NSApp stopModalWithCode: 2 ];
@@ -265,12 +192,6 @@
 #pragma mark -
 #pragma mark Misc.
 
-/*
- - (void)applicationDidBecomeActive:(NSNotification *)aNotification
-{
-    [ palette makeKeyAndOrderFront: self ];
-}
-*/
 - (void)applicationWillTerminate:(NSNotification *)aNotification
 {
     NSEnumerator *e;
@@ -283,6 +204,7 @@
     [ palette saveFrameUsingName: @"tunnelsWindow" ];
     [[ NSUserDefaults standardUserDefaults ] setObject: [ NSNumber numberWithBool: [ palette isVisible ]] forKey: @"openPalette" ];
 }
+
 - (IBAction)showHide:(id)sender;
 {
     if (! [ palette isVisible ])

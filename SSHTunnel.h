@@ -23,6 +23,9 @@
     NSString *connUser;
     NSString *connHost;
 }
+
+@property (copy) NSString *connName;
+
 -(id)initWithName:(NSString*)aName;
 -(id)initWithDictionary:(NSDictionary*)aDictionary;
 +(id)tunnelWithName:(NSString*)aName;

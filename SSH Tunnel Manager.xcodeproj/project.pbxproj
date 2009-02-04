@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45E9A91D0F354B4000310550 /* EMKeychainItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 45E9A9180F354B4000310550 /* EMKeychainItem.h */; };
+		45E9A91E0F354B4000310550 /* EMKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E9A9190F354B4000310550 /* EMKeychainItem.m */; };
+		45E9A91F0F354B4000310550 /* EMKeychainProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 45E9A91A0F354B4000310550 /* EMKeychainProxy.h */; };
+		45E9A9200F354B4000310550 /* EMKeychainProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E9A91B0F354B4000310550 /* EMKeychainProxy.m */; };
+		45E9A9210F354B4000310550 /* ReadMe(Really).rtf in Resources */ = {isa = PBXBuildFile; fileRef = 45E9A91C0F354B4000310550 /* ReadMe(Really).rtf */; };
+		45E9A9420F354E1600310550 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45E9A9410F354E1600310550 /* Security.framework */; };
 		8D1107280486CEB800E47090 /* SSH Tunnel Manager 2_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32CA4F630368D1EE00C91783 /* SSH Tunnel Manager 2_Prefix.pch */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -19,7 +25,6 @@
 		AA64C5D70575026C00C7F06D /* start_p.tif in Resources */ = {isa = PBXBuildFile; fileRef = AA64C5D30575026B00C7F06D /* start_p.tif */; };
 		AA64C5D80575026C00C7F06D /* stop_n.tif in Resources */ = {isa = PBXBuildFile; fileRef = AA64C5D40575026B00C7F06D /* stop_n.tif */; };
 		AA64C5D90575026C00C7F06D /* stop_p.tif in Resources */ = {isa = PBXBuildFile; fileRef = AA64C5D50575026B00C7F06D /* stop_p.tif */; };
-		AA6D68CA05C808D2007F1476 /* ssh in Resources */ = {isa = PBXBuildFile; fileRef = AA6D68C905C808D2007F1476 /* ssh */; };
 		AA7149AD056B7E5C009CEC64 /* Add_Pressed.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AA7149AC056B7E5C009CEC64 /* Add_Pressed.tiff */; };
 		AA7149B3056B8141009CEC64 /* Add.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AA7149B2056B8141009CEC64 /* Add.tiff */; };
 		AA7149B5056B8199009CEC64 /* Add.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AA7149B4056B8199009CEC64 /* Add.tiff */; };
@@ -63,6 +68,12 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* SSH Tunnel Manager 2_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SSH Tunnel Manager 2_Prefix.pch"; sourceTree = "<group>"; };
+		45E9A9180F354B4000310550 /* EMKeychainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMKeychainItem.h; sourceTree = "<group>"; };
+		45E9A9190F354B4000310550 /* EMKeychainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMKeychainItem.m; sourceTree = "<group>"; };
+		45E9A91A0F354B4000310550 /* EMKeychainProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMKeychainProxy.h; sourceTree = "<group>"; };
+		45E9A91B0F354B4000310550 /* EMKeychainProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMKeychainProxy.m; sourceTree = "<group>"; };
+		45E9A91C0F354B4000310550 /* ReadMe(Really).rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "ReadMe(Really).rtf"; sourceTree = "<group>"; };
+		45E9A9410F354E1600310550 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* SSH Tunnel Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SSH Tunnel Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA0328D705C07CA300567E2B /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/passQuery.nib; sourceTree = "<group>"; };
@@ -77,7 +88,6 @@
 		AA64C5D30575026B00C7F06D /* start_p.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = start_p.tif; sourceTree = "<group>"; };
 		AA64C5D40575026B00C7F06D /* stop_n.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = stop_n.tif; sourceTree = "<group>"; };
 		AA64C5D50575026B00C7F06D /* stop_p.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = stop_p.tif; sourceTree = "<group>"; };
-		AA6D68C905C808D2007F1476 /* ssh */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ssh; sourceTree = "<group>"; };
 		AA7149A4056B7D71009CEC64 /* Add_Disabled.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Add_Disabled.tiff; sourceTree = "<group>"; };
 		AA7149AC056B7E5C009CEC64 /* Add_Pressed.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Add_Pressed.tiff; sourceTree = "<group>"; };
 		AA7149B2056B8141009CEC64 /* Add.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Add.tiff; sourceTree = "<group>"; };
@@ -122,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				45E9A9420F354E1600310550 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +142,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				45E9A9170F354B4000310550 /* EMKeychain */,
 				AA99E4050568FFD2007ACC90 /* SSHTunnelManager.h */,
 				AA99E4060568FFD2007ACC90 /* SSHTunnelManager.m */,
 				AAC841DD0569946200C5A7D2 /* TunnelsTableView.h */,
@@ -155,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				45E9A9410F354E1600310550 /* Security.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -201,9 +214,36 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AA6D68C905C808D2007F1476 /* ssh */,
 				AA5BA7DC05BEEC3600E3E315 /* Credits.rtf */,
 				AAF712F20572C95200E460D2 /* askForPass.sh */,
+				4562DB560F396A6F00AF22F2 /* images */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				AAAF91CA05B7E2AC0004C55E /* Preferences.nib */,
+				AAE7B74A05BD8E6E00B71663 /* passQuery.nib */,
+				AAE7B74C05BD8E7300B71663 /* ynQuery.nib */,
+				AAF712820572B69300E460D2 /* SSHTunnelManager.scriptSuite */,
+				AAF712840572B6A100E460D2 /* SSHTunnelManager.scriptTerminology */,
+				AAFCFCF70573C95E005EF049 /* Localizable.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4562DB560F396A6F00AF22F2 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				AA7149AC056B7E5C009CEC64 /* Add_Pressed.tiff */,
+				AA7149B2056B8141009CEC64 /* Add.tiff */,
 				AA90AB06056A1519009C982A /* stm.tif */,
 				AA90AB04056A13F2009C982A /* stm.icns */,
 				AA90AAF8056A0CEC009C982A /* offState.png */,
@@ -219,28 +259,20 @@
 				AA64C5D40575026B00C7F06D /* stop_n.tif */,
 				AA64C5D50575026B00C7F06D /* stop_p.tif */,
 				AA7149BA056B8411009CEC64 /* Remove.tif */,
-				8D1107310486CEB800E47090 /* Info.plist */,
-				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
-				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
-				AAAF91CA05B7E2AC0004C55E /* Preferences.nib */,
-				AAE7B74A05BD8E6E00B71663 /* passQuery.nib */,
-				AAE7B74C05BD8E7300B71663 /* ynQuery.nib */,
-				AA7149AC056B7E5C009CEC64 /* Add_Pressed.tiff */,
-				AA7149B2056B8141009CEC64 /* Add.tiff */,
-				AAF712820572B69300E460D2 /* SSHTunnelManager.scriptSuite */,
-				AAF712840572B6A100E460D2 /* SSHTunnelManager.scriptTerminology */,
-				AAFCFCF70573C95E005EF049 /* Localizable.strings */,
 			);
-			name = Resources;
+			name = images;
 			sourceTree = "<group>";
 		};
-		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+		45E9A9170F354B4000310550 /* EMKeychain */ = {
 			isa = PBXGroup;
 			children = (
-				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
-				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+				45E9A9180F354B4000310550 /* EMKeychainItem.h */,
+				45E9A9190F354B4000310550 /* EMKeychainItem.m */,
+				45E9A91A0F354B4000310550 /* EMKeychainProxy.h */,
+				45E9A91B0F354B4000310550 /* EMKeychainProxy.m */,
+				45E9A91C0F354B4000310550 /* ReadMe(Really).rtf */,
 			);
-			name = Frameworks;
+			path = EMKeychain;
 			sourceTree = "<group>";
 		};
 		AA18503E056AAE05007E2D28 /* tunnelOpener */ = {
@@ -267,6 +299,8 @@
 				AAA9BB4505765A12003D1ABB /* TynsoeClasses.h in Headers */,
 				AA8ACF5705B85334005BFBFE /* passWindowController.h in Headers */,
 				AA8ACF5B05B8537E005BFBFE /* ynWindowController.h in Headers */,
+				45E9A91D0F354B4000310550 /* EMKeychainItem.h in Headers */,
+				45E9A91F0F354B4000310550 /* EMKeychainProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +374,7 @@
 				AAE7B74B05BD8E6E00B71663 /* passQuery.nib in Resources */,
 				AAE7B74D05BD8E7300B71663 /* ynQuery.nib in Resources */,
 				AA5BA7DD05BEEC3600E3E315 /* Credits.rtf in Resources */,
-				AA6D68CA05C808D2007F1476 /* ssh in Resources */,
+				45E9A9210F354B4000310550 /* ReadMe(Really).rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +394,8 @@
 				AAA9BB4605765A12003D1ABB /* TynsoeClasses.m in Sources */,
 				AA8ACF5805B85334005BFBFE /* passWindowController.m in Sources */,
 				AA8ACF5C05B8537E005BFBFE /* ynWindowController.m in Sources */,
+				45E9A91E0F354B4000310550 /* EMKeychainItem.m in Sources */,
+				45E9A9200F354B4000310550 /* EMKeychainProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

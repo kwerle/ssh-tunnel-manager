@@ -19,6 +19,8 @@
 
 @implementation SSHTunnel
 
+@synthesize connName;
+
 #pragma mark -
 #pragma mark Initialization
 -(id)init
@@ -28,36 +30,37 @@
 -(id)initWithName:(NSString*)aName
 {
     NSDictionary *dictionary = [ NSDictionary dictionaryWithObjectsAndKeys:
-	[ NSNumber numberWithBool: NO ],@"compression",
-	[ NSNumber numberWithBool: YES ],@"connAuth",
-	@"", @"connHost",
-	aName, @"connName",
-	@"", @"connPort",
-	[ NSNumber numberWithBool: NO ],@"connRemote",
-	@"", @"connUser",
-	@"3des", @"encryption",
-	[ NSNumber numberWithBool: NO ],@"socks4",
-	[ NSNumber numberWithInt: 1080 ], @"socks4p",
-	[ NSArray array ], @"tunnelsLocal",
-	[ NSArray array ], @"tunnelsRemote",
-	[ NSNumber numberWithBool: NO ],@"v1", nil
-	];
+								[ NSNumber numberWithBool: NO ],@"compression",
+								[ NSNumber numberWithBool: YES ],@"connAuth",
+								@"", @"connHost",
+								aName, @"connName",
+								@"", @"connPort",
+								[ NSNumber numberWithBool: NO ],@"connRemote",
+								@"", @"connUser",
+								@"3des", @"encryption",
+								[ NSNumber numberWithBool: NO ],@"socks4",
+								[ NSNumber numberWithInt: 1080 ], @"socks4p",
+								[ NSArray array ], @"tunnelsLocal",
+								[ NSArray array ], @"tunnelsRemote",
+								[ NSNumber numberWithBool: NO ],@"v1", nil
+								];
     return [ self initWithDictionary: dictionary ];
 }
+
 -(id)initWithDictionary:(NSDictionary*)aDictionary
 {
     NSEnumerator *e;
     NSString *key;
-
+	
     self = [ super init ];
     e = [[ aDictionary allKeys ] objectEnumerator ];
     while (key = [ e nextObject ])
     {
-	[ self setValue: [ aDictionary objectForKey: key ] forKey: key ];
+		[ self setValue: [ aDictionary objectForKey: key ] forKey: key ];
     }
     code = 0;
     if ([[ self valueForKey: @"autoConnect" ] boolValue ])
-	[ self startTunnel ];
+		[ self startTunnel ];
     return self;
 }
 +(id)tunnelWithName:(NSString*)aName
@@ -79,8 +82,8 @@
     e = [ anArray objectEnumerator ];
     while (currentTunnelDictionary = [ e nextObject ])
     {
-	currentTunnel = [ SSHTunnel tunnelFromDictionary: currentTunnelDictionary ];
-	[ newArray addObject: currentTunnel ];
+		currentTunnel = [ SSHTunnel tunnelFromDictionary: currentTunnelDictionary ];
+		[ newArray addObject: currentTunnel ];
     }
     return [[ newArray copy ] autorelease ];
 }
@@ -94,6 +97,7 @@
     [ tunnelsLocal release ];
     tunnelsLocal = [ tempTunnelsLocal copy ];
 }
+
 - (void)removeLocal:(int)index
 {
     NSMutableArray *tempLocalTunnels = [ tunnelsLocal mutableCopy ];
@@ -102,6 +106,7 @@
     tunnelsLocal = [ tempLocalTunnels copy ];
     [ tempLocalTunnels release ];
 }
+
 -(void)addRemoteTunnel:(NSDictionary*)aDictionary;
 {
     NSMutableArray *tempTunnelsRemote = [ NSMutableArray arrayWithArray: tunnelsRemote ];
@@ -109,6 +114,7 @@
     [ tunnelsRemote release ];
     tunnelsRemote = [ tempTunnelsRemote copy ];
 }
+
 - (void)removeRemote:(int)index
 {
     NSMutableArray *tempRemoteTunnels = [ tunnelsRemote mutableCopy ];
@@ -117,6 +123,7 @@
     tunnelsRemote = [ tempRemoteTunnels copy ];
     [ tempRemoteTunnels release ];
 }
+
 - (void)setLocalValue:(NSString*)aValue ofTunnel:(int)index forKey:(NSString*)key
 {
     NSMutableArray *tempLocalTunnel;
@@ -131,6 +138,7 @@
     [ tunnelsLocal release ];
     tunnelsLocal = [ tempLocalTunnel copy ];
 }
+
 - (void)setRemoteValue:(NSString*)aValue ofTunnel:(int)index forKey:(NSString*)key
 {
     NSMutableArray *tempRemoteTunnel;
@@ -150,98 +158,20 @@
 #pragma mark Execution related
 - (void)startTunnel
 {    
-//    NSDictionary *t;
-//    NSEnumerator *e;
-//    BOOL asRoot = NO;
-    
     if ([ self isRunning ])
-	return;
+		return;
     
     shouldStop = NO;
-    /*
-    [ arguments addObject: @"-N" ];
-    [ arguments addObject: @"-v" ];
-    [ arguments addObject: @"-p" ];
-    if ([ connPort length ])
-	[ arguments addObject: connPort];
-    else
-	[ arguments addObject: @"22" ];
-    
-    if (connRemote)
-	[ arguments addObject: @"-g" ];
-    if (compression)
-	[ arguments addObject: @"-C" ];
-    if (v1)
-	[ arguments addObject: @"-1" ];
-    
-    [ arguments addObject: @"-c"];
-    if (encryption)
-	[ arguments addObject: encryption];
-    else
-	[ arguments addObject: @"3des"];
-    
-    if (socks4 && socks4p != nil)
-    {
-	[ arguments addObject: @"-D" ];
-	[ arguments addObject: [ socks4p stringValue ]];
-    }
-    [ arguments addObject: [ NSString stringWithFormat: @"%@@%@",
-	connUser, connHost ]
-	];
-    
-    NSString *hostPort;
-    e = [ tunnelsLocal objectEnumerator ];
-    while (t = [ e nextObject ])
-    {
-	[ arguments addObject: @"-L" ];
-	if ([[ t objectForKey:@"hostport"] isEqualTo: @"" ])
-	    hostPort = [ t objectForKey:@"port" ];
-	else
-	    hostPort = [ t objectForKey:@"hostport" ];
-	[ arguments addObject: [NSString stringWithFormat:@"%@/%@/%@",
-	    [ t objectForKey:@"port"],
-	    [ t objectForKey:@"host"],
-	    hostPort
-	    ] ];
-	if ([[ t objectForKey:@"port"] intValue] < 1024)
-	    asRoot=YES;
-    }
-    
-    e = [ tunnelsRemote objectEnumerator ];
-    while (t = [ e nextObject ])
-    {
-	[ arguments addObject: @"-R" ];
-	if ([[ t objectForKey:@"hostport"] isEqualTo: @"" ])
-	    hostPort = [ t objectForKey:@"port" ];
-	else
-	    hostPort = [ t objectForKey:@"hostport" ];
-	[ arguments addObject: [NSString stringWithFormat:@"%@/%@/%@",
-	    [ t objectForKey:@"port"],
-	    [ t objectForKey:@"host"],
-	    hostPort
-	    ]];
-    }
-    args = [ NSMutableDictionary dictionary ];
-    [ args setObject: arguments forKey:@"arguments" ];
-    [ args setObject: [ NSNumber numberWithBool: connAuth ] forKey: @"handleAuth" ];
-    [ args setObject: connName forKey:@"tunnelName" ];
-    [ args setObject: [ NSNumber numberWithBool: asRoot ] forKey: @"asRoot" ];
-    
-    
-     [ NSThread detachNewThreadSelector:@selector(launchTunnel:)
-			       toTarget: self
-			     withObject: args ];
-     */
+	
     [ NSThread detachNewThreadSelector:@selector(launchTunnel:)
-			      toTarget: self
-			    withObject: nil ];
-//    [ arguments release ];
-    
+							  toTarget: self
+							withObject: nil ];
 }
+
 - (void)stopTunnel
 {
     if (! [ self isRunning ])
-	return;
+		return;
     shouldStop=YES;
     [ self setValue: nil forKey: @"status" ];
     [ task terminate ];
@@ -252,24 +182,24 @@
 - (void)toggleTunnel
 {
     if ([ self isRunning ])
-	[ self stopTunnel ];
+		[ self stopTunnel ];
     else
-	[ self startTunnel ];
+		[ self startTunnel ];
 }
 
 - (void)launchTunnel:(id)foo;
 {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-
+	
     if (task)
-	[ task release ];
+		[ task release ];
     task = [[ NSTask alloc ] init ];
     NSMutableDictionary *environment = [ NSMutableDictionary dictionaryWithDictionary: [[ NSProcessInfo processInfo ] environment ]];
     NSString *pathToAuthentifier = [[ NSBundle mainBundle ] pathForResource: @"askForPass" ofType: @"sh" ];
     if (socks4)
-	[ task setLaunchPath: [[ NSBundle mainBundle ] pathForResource: @"ssh" ofType: @"" ]];
+		[ task setLaunchPath: [[ NSBundle mainBundle ] pathForResource: @"ssh" ofType: @"" ]];
     else
-	[ task setLaunchPath: @"/usr/bin/ssh" ];
+		[ task setLaunchPath: @"/usr/bin/ssh" ];
     [ task setArguments: [ self arguments ]];
     if (connAuth)
     {
@@ -280,17 +210,17 @@
     }
     [ environment setObject: connName forKey: @"TUNNEL_NAME" ];
     [ task setEnvironment: environment ];
-
+	
     stdErrPipe = [[ NSPipe alloc ] init ];
     [ task setStandardError: stdErrPipe ];
     
     [[ NSNotificationCenter defaultCenter] addObserver:self 
-					      selector:@selector(stdErr:) 
-						  name: @"NSFileHandleDataAvailableNotification"
-						object:[ stdErrPipe fileHandleForReading]];
+											  selector:@selector(stdErr:) 
+												  name: @"NSFileHandleDataAvailableNotification"
+												object:[ stdErrPipe fileHandleForReading]];
     
     [[ stdErrPipe fileHandleForReading] waitForDataInBackgroundAndNotify ];
-
+	
     NSLog(T_START,connName);
     [ self setValue: S_CONNECTING forKey: @"status" ];
     code = 1;
@@ -302,15 +232,15 @@
     [ self setValue: S_IDLE forKey: @"status" ];
     NSLog(T_STOP,connName);
     [[ NSNotificationCenter defaultCenter] removeObserver:self 
-						     name: @"NSFileHandleDataAvailableNotification"
-						   object:[ stdErrPipe fileHandleForReading]];    
+													 name: @"NSFileHandleDataAvailableNotification"
+												   object:[ stdErrPipe fileHandleForReading]];    
     [ task release ];
     task = nil;
     [ stdErrPipe release ];
     stdErrPipe = nil;
     [[ NSNotificationCenter defaultCenter]  postNotificationName:@"STMStatusChanged" object:self ];
     if (! shouldStop)
-	[ self startTunnel ];
+		[ self startTunnel ];
     [ pool release ];
 }
 
@@ -321,39 +251,39 @@
     BOOL wait = YES;
     if ([ log length ])
     {
-	//NSLog(log);
-	NSArray *lines = [ log componentsSeparatedByString:@"\n" ];
-	NSEnumerator *e = [ lines objectEnumerator ];
-	NSString *line;
-	while (line = [ e nextObject ])
-	{
-	    if ([ line rangeOfString:@"Entering interactive session." ].location != NSNotFound)
-	    {
-		code = 2;   
-		[ self setValue: S_CONNECTED  forKey: @"status"];
-	    }
-	    if ([ line rangeOfString:@"Authentication succeeded" ].location != NSNotFound)
-		[ self setValue: S_AUTH forKey: @"status"];
-	    if ([ line rangeOfString:@"Connections to local port" ].location != NSNotFound)
-	    {
-		NSScanner *s;
-		NSString *port;
-		s = [ NSScanner scannerWithString:log];
-		[ s scanUpToString: @"Connections to local port " intoString: nil ];
-		[ s scanString: @"Connections to local port " intoString: nil ];
-		[ s scanUpToString: @"forwarded" intoString:&port];
-		[ self setValue: [ NSString stringWithFormat: @"Port %@ forwarded", port ] forKey: @"status"];
-	    }
-	    if ([ line rangeOfString:@"closed by remote host." ].location != NSNotFound)
-	    {
-		[ task terminate];
-		[ self setValue: @"Connection closed" forKey: @"status"];
-		wait = NO;
-	    }
-	    [[ NSNotificationCenter defaultCenter]  postNotificationName:@"STMStatusChanged" object:self ];
-	}
-	if (wait)
-	    [[ stdErrPipe fileHandleForReading ] waitForDataInBackgroundAndNotify ];
+		//NSLog(log);
+		NSArray *lines = [ log componentsSeparatedByString:@"\n" ];
+		NSEnumerator *e = [ lines objectEnumerator ];
+		NSString *line;
+		while (line = [ e nextObject ])
+		{
+			if ([ line rangeOfString:@"Entering interactive session." ].location != NSNotFound)
+			{
+				code = 2;   
+				[ self setValue: S_CONNECTED  forKey: @"status"];
+			}
+			if ([ line rangeOfString:@"Authentication succeeded" ].location != NSNotFound)
+				[ self setValue: S_AUTH forKey: @"status"];
+			if ([ line rangeOfString:@"Connections to local port" ].location != NSNotFound)
+			{
+				NSScanner *s;
+				NSString *port;
+				s = [ NSScanner scannerWithString:log];
+				[ s scanUpToString: @"Connections to local port " intoString: nil ];
+				[ s scanString: @"Connections to local port " intoString: nil ];
+				[ s scanUpToString: @"forwarded" intoString:&port];
+				[ self setValue: [ NSString stringWithFormat: @"Port %@ forwarded", port ] forKey: @"status"];
+			}
+			if ([ line rangeOfString:@"closed by remote host." ].location != NSNotFound)
+			{
+				[ task terminate];
+				[ self setValue: @"Connection closed" forKey: @"status"];
+				wait = NO;
+			}
+			[[ NSNotificationCenter defaultCenter]  postNotificationName:@"STMStatusChanged" object:self ];
+		}
+		if (wait)
+			[[ stdErrPipe fileHandleForReading ] waitForDataInBackgroundAndNotify ];
     }
     [ log release] ;
 }
@@ -361,7 +291,7 @@
 - (BOOL)isRunning
 {
     if ([ task isRunning ])
-	return YES;
+		return YES;
     return NO;
 }
 
@@ -370,9 +300,10 @@
 - (NSString*)status
 {
     if (status)
-	return status;
+		return status;
     return S_IDLE;
 }
+
 - (NSArray*)arguments
 {
     NSMutableArray *arguments;
@@ -385,63 +316,63 @@
     [ arguments addObject: @"-v" ];
     [ arguments addObject: @"-p" ];
     if ([ connPort length ])
-	[ arguments addObject: connPort];
+		[ arguments addObject: connPort];
     else
-	[ arguments addObject: @"22" ];
+		[ arguments addObject: @"22" ];
     
     if (connRemote)
-	[ arguments addObject: @"-g" ];
+		[ arguments addObject: @"-g" ];
     if (compression)
-	[ arguments addObject: @"-C" ];
+		[ arguments addObject: @"-C" ];
     if (v1)
-	[ arguments addObject: @"-1" ];
+		[ arguments addObject: @"-1" ];
     
     [ arguments addObject: @"-c"];
     if (encryption)
-	[ arguments addObject: encryption];
+		[ arguments addObject: encryption];
     else
-	[ arguments addObject: @"3des"];
+		[ arguments addObject: @"3des"];
     
     if (socks4 && socks4p != nil)
     {
-	[ arguments addObject: @"-D" ];
-	[ arguments addObject: [ socks4p stringValue ]];
+		[ arguments addObject: @"-D" ];
+		[ arguments addObject: [ socks4p stringValue ]];
     }
     [ arguments addObject: [ NSString stringWithFormat: @"%@@%@",
-	connUser, connHost ]
-	];
+							connUser, connHost ]
+	 ];
     
     NSString *hostPort;
     e = [ tunnelsLocal objectEnumerator ];
     while (t = [ e nextObject ])
     {
-	[ arguments addObject: @"-L" ];
-	if ([[ t objectForKey:@"hostport"] isEqualTo: @"" ])
-	    hostPort = [ t objectForKey:@"port" ];
-	else
-	    hostPort = [ t objectForKey:@"hostport" ];
-	[ arguments addObject: [NSString stringWithFormat:@"%@/%@/%@",
-	    [ t objectForKey:@"port"],
-	    [ t objectForKey:@"host"],
-	    hostPort
-	    ] ];
-	if ([[ t objectForKey:@"port"] intValue] < 1024)
-	    asRoot=YES;
+		[ arguments addObject: @"-L" ];
+		if ([[ t objectForKey:@"hostport"] isEqualTo: @"" ])
+			hostPort = [ t objectForKey:@"port" ];
+		else
+			hostPort = [ t objectForKey:@"hostport" ];
+		[ arguments addObject: [NSString stringWithFormat:@"%@/%@/%@",
+								[ t objectForKey:@"port"],
+								[ t objectForKey:@"host"],
+								hostPort
+								] ];
+		if ([[ t objectForKey:@"port"] intValue] < 1024)
+			asRoot=YES;
     }
     
     e = [ tunnelsRemote objectEnumerator ];
     while (t = [ e nextObject ])
     {
-	[ arguments addObject: @"-R" ];
-	if ([[ t objectForKey:@"hostport"] isEqualTo: @"" ])
-	    hostPort = [ t objectForKey:@"port" ];
-	else
-	    hostPort = [ t objectForKey:@"hostport" ];
-	[ arguments addObject: [NSString stringWithFormat:@"%@/%@/%@",
-	    [ t objectForKey:@"port"],
-	    [ t objectForKey:@"host"],
-	    hostPort
-	    ]];
+		[ arguments addObject: @"-R" ];
+		if ([[ t objectForKey:@"hostport"] isEqualTo: @"" ])
+			hostPort = [ t objectForKey:@"port" ];
+		else
+			hostPort = [ t objectForKey:@"hostport" ];
+		[ arguments addObject: [NSString stringWithFormat:@"%@/%@/%@",
+								[ t objectForKey:@"port"],
+								[ t objectForKey:@"host"],
+								hostPort
+								]];
     }
     
     return [[ arguments copy ] autorelease ];
@@ -450,21 +381,21 @@
 - (NSDictionary*)dictionary
 {
     return [ NSDictionary dictionaryWithObjectsAndKeys:
-	[ NSNumber numberWithBool: compression ],@"compression",
-	[ NSNumber numberWithBool: connAuth ],@"connAuth",
-	[ NSNumber numberWithBool: autoConnect ],@"autoConnect",
-	connHost, @"connHost",
-	connName, @"connName",
-	connPort, @"connPort",
-	[ NSNumber numberWithBool: connRemote ],@"connRemote",
-	connUser, @"connUser",
-	encryption, @"encryption",
-	[ NSNumber numberWithBool: socks4 ],@"socks4",
-	socks4p, @"socks4p",
-	tunnelsLocal, @"tunnelsLocal",
-	tunnelsRemote, @"tunnelsRemote",
-	[ NSNumber numberWithBool: v1 ],@"v1", nil
-	];
+			[ NSNumber numberWithBool: compression ],@"compression",
+			[ NSNumber numberWithBool: connAuth ],@"connAuth",
+			[ NSNumber numberWithBool: autoConnect ],@"autoConnect",
+			connHost, @"connHost",
+			connName, @"connName",
+			connPort, @"connPort",
+			[ NSNumber numberWithBool: connRemote ],@"connRemote",
+			connUser, @"connUser",
+			encryption, @"encryption",
+			[ NSNumber numberWithBool: socks4 ],@"socks4",
+			socks4p, @"socks4p",
+			tunnelsLocal, @"tunnelsLocal",
+			tunnelsRemote, @"tunnelsRemote",
+			[ NSNumber numberWithBool: v1 ],@"v1", nil
+			];
 }
 
 
@@ -474,15 +405,15 @@
 {
     switch (code)
     {
-	case 0:
-	    return [ NSImage imageNamed: @"offState" ];
-	    break;
-	case 1:
-	    return [ NSImage imageNamed: @"middleState" ];
-	    break;
-	case 2:
-	    return [ NSImage imageNamed: @"onState" ];
-	    break;
+		case 0:
+			return [ NSImage imageNamed: @"offState" ];
+			break;
+		case 1:
+			return [ NSImage imageNamed: @"middleState" ];
+			break;
+		case 2:
+			return [ NSImage imageNamed: @"onState" ];
+			break;
     }
     return [ NSImage imageNamed: @"offState" ];
 }
@@ -512,6 +443,6 @@
     [ socks4p release ];
     [ connUser release ];
     [ connHost release ];
-    
+    [super dealloc];
 }
 @end
