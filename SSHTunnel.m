@@ -344,6 +344,19 @@
     
     NSString *hostPort;
     e = [ tunnelsLocal objectEnumerator ];
+    NSDictionary *systemVersionDictionary =
+    [NSDictionary dictionaryWithContentsOfFile:
+     @"/System/Library/CoreServices/SystemVersion.plist"];
+    
+    NSString *systemVersion =
+    [systemVersionDictionary objectForKey:@"ProductVersion"];
+    NSString *formatSring = @"%@/%@/%@";
+    if(systemVersion.doubleValue >= 10.11){
+        formatSring = @"%@:%@:%@";
+    //    NSLog(@"I am El and have format string %@", formatSring)
+    }
+   // NSLog(@"OS version %@", systemVersion);
+    
     while (t = [ e nextObject ])
     {
 		[ arguments addObject: @"-L" ];
@@ -351,7 +364,7 @@
 			hostPort = [ t objectForKey:@"port" ];
 		else
 			hostPort = [ t objectForKey:@"hostport" ];
-		[ arguments addObject: [NSString stringWithFormat:@"%@/%@/%@",
+		[ arguments addObject: [NSString stringWithFormat:formatSring,
 								[ t objectForKey:@"port"],
 								[ t objectForKey:@"host"],
 								hostPort
@@ -368,7 +381,7 @@
 			hostPort = [ t objectForKey:@"port" ];
 		else
 			hostPort = [ t objectForKey:@"hostport" ];
-		[ arguments addObject: [NSString stringWithFormat:@"%@/%@/%@",
+		[ arguments addObject: [NSString stringWithFormat:formatSring,
 								[ t objectForKey:@"port"],
 								[ t objectForKey:@"host"],
 								hostPort

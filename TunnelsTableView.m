@@ -38,9 +38,10 @@
 }
 - (NSColor *)_highlightColorForCell:(NSCell *)cell;
 {
-    if (selectionActive)
-	return [ (TunnelsTableView*)super _highlightColorForCell: cell ];
-    else
+    //FIXME
+    //if (selectionActive)
+	//return [ (TunnelsTableView*) _highlightColorForCell: cell ];
+    //else
 	return nil;
 }
 @end

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,8 +27,6 @@
 		AA64C5D90575026C00C7F06D /* stop_p.tif in Resources */ = {isa = PBXBuildFile; fileRef = AA64C5D50575026B00C7F06D /* stop_p.tif */; };
 		AA7149AD056B7E5C009CEC64 /* Add_Pressed.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AA7149AC056B7E5C009CEC64 /* Add_Pressed.tiff */; };
 		AA7149B3056B8141009CEC64 /* Add.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AA7149B2056B8141009CEC64 /* Add.tiff */; };
-		AA7149B5056B8199009CEC64 /* Add.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AA7149B4056B8199009CEC64 /* Add.tiff */; };
-		AA7149B7056B8225009CEC64 /* Add_Pressed.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AA7149B6056B8225009CEC64 /* Add_Pressed.tiff */; };
 		AA7149BB056B8411009CEC64 /* Remove_Disabled.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AA7149B8056B8411009CEC64 /* Remove_Disabled.tiff */; };
 		AA7149BC056B8411009CEC64 /* Remove_Pressed.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AA7149B9056B8411009CEC64 /* Remove_Pressed.tiff */; };
 		AA7149BD056B8411009CEC64 /* Remove.tif in Resources */ = {isa = PBXBuildFile; fileRef = AA7149BA056B8411009CEC64 /* Remove.tif */; };
@@ -331,9 +329,16 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+			};
 			buildConfigurationList = 45F440740F233042004EB88E /* Build configuration list for PBXProject "SSH Tunnel Manager" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* SSH Tunnel Manager */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -357,8 +362,6 @@
 				AAAF91CB05B7E2AC0004C55E /* Preferences.nib in Resources */,
 				AA7149AD056B7E5C009CEC64 /* Add_Pressed.tiff in Resources */,
 				AA7149B3056B8141009CEC64 /* Add.tiff in Resources */,
-				AA7149B5056B8199009CEC64 /* Add.tiff in Resources */,
-				AA7149B7056B8225009CEC64 /* Add_Pressed.tiff in Resources */,
 				AA7149BB056B8411009CEC64 /* Remove_Disabled.tiff in Resources */,
 				AA7149BC056B8411009CEC64 /* Remove_Pressed.tiff in Resources */,
 				AA7149BD056B8411009CEC64 /* Remove.tif in Resources */,
@@ -470,6 +473,8 @@
 		45F4406E0F233024004EB88E /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Development;
 		};
@@ -488,6 +493,7 @@
 		45F440710F233024004EB88E /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUGGING_SYMBOLS = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
@@ -508,6 +514,7 @@
 				OPTIMIZATION_CFLAGS = "-O0";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = org.tynsoe.sshtunnelmanager;
 				PRODUCT_NAME = "SSH Tunnel Manager";
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
@@ -523,6 +530,7 @@
 		45F440720F233024004EB88E /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 40;
 				FRAMEWORK_SEARCH_PATHS = "";
@@ -540,6 +548,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = org.tynsoe.sshtunnelmanager;
 				PRODUCT_NAME = "SSH Tunnel Manager";
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
@@ -555,6 +564,7 @@
 		45F440730F233024004EB88E /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_ENABLE_TRIGRAPHS = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -569,6 +579,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = org.tynsoe.sshtunnelmanager;
 				PRODUCT_NAME = "SSH Tunnel Manager";
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
